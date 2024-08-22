@@ -1,7 +1,7 @@
 # Circumventing common SSRF defenses
 It is common to see applications containing SSRF behavior together with defenses aimed at preventing malicious exploitation. Often, these defenses can be circumvented.
 
-## SSRF with blacklist-based input filters
+## SSRF with deny-based input filters
 Some applications block input containing hostnames like 127.0.0.1 and localhost, or sensitive URLs like /admin. In this situation, you can often circumvent the filter using the following techniques:
 
  - Use an alternative IP representation of `127.0.0.1`, such as `2130706433`, `017700000001`, or `127.1`.
@@ -9,7 +9,7 @@ Some applications block input containing hostnames like 127.0.0.1 and localhost,
  - Obfuscate blocked strings using URL encoding or case variation.
  - Provide a URL that you control, which redirects to the target URL. Try using different redirect codes, as well as different protocols for the target URL. For example, switching from an http: to https: URL during the redirect has been shown to bypass some anti-SSRF filters.
 
-## SSRF with whitelist-based input filters
+## SSRF with allow-based input filters
 Some applications only allow inputs that match, a whitelist of permitted values. The filter may look for a match at the beginning of the input, or contained within in it. You may be able to bypass this filter by exploiting inconsistencies in URL parsing.
 
 The URL specification contains a number of features that are likely to be overlooked when URLs implement ad-hoc parsing and validation using this method:
