@@ -3,9 +3,9 @@
 This repository is a demonstration of Server-Side Request Forgery (SSRF) vulnerabilities in web applications. It includes a brief overview of SSRF, common defenses, and how to bypass them. The repository also includes a demonstration of an SSRF vulnerability in the popular Axios library.
 
 TOC:
-- [SSRF 101](#docs/SSRF_101.md)
-- [SSRF Bypass](#docs/SSRF_bypass.md)
-- [Axios SSRF Vulnerability CVE-2024-39338](#docs/Axios_SSRF_vuln.md)
+- [SSRF 101](docs/SSRF_101.md)
+- [SSRF Bypass](docs/SSRF_bypass.md)
+- [Axios SSRF Vulnerability CVE-2024-39338](docs/Axios_SSRF_vuln.md)
 
 
 ## Sources / Credits:
