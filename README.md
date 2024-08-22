@@ -25,3 +25,11 @@ this.axios.get(`/${userId}`).then(function (response) {
   console.log(`res.responseUrl: ${response.request.res.responseUrl}`);
 });
 ```
+
+## Sources / Credits:
+- [OWASP SSRF](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery)
+- [PortSwigger SSRF](https://portswigger.net/web-security/ssrf)
+- [Snyk SSRF](https://snyk.io/vuln/SNYK-JS-AXIOS-7361793)
+- [CVE-2024-39338](https://www.cve.org/CVERecord?id=CVE-2024-39338)
+- [GitHub Issue - jeffhacks](https://github.com/axios/axios/issues/6463)
+- [GitHub Issue - Osb0rn3](https://github.com/axios/axios/issues/6295)
