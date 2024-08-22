@@ -61,3 +61,24 @@ The key fix here was removing the `?` from the regular expression, which was all
 
 ## Remediation
 Upgrade to Axios version 1.7.4 or later to fix this vulnerability. The maintainers have released a patch to address this issue. You can find more information in the [GitHub PR](https://github.com/axios/axios/commit/07a661a2a6b9092c4aa640dcc7f724ec5e65bdda)
+
+
+## Demo
+
+```js
+const axios = require('axios');
+
+this.axios = axios.create({
+  baseURL: 'https://userapi.example.com',
+});
+
+//userId = '12345';
+userId = '/google.com'
+
+this.axios.get(`/${userId}`).then(function (response) {
+  console.log(`config.baseURL:  ${response.config.baseURL}`);
+  console.log(`config.method:   ${response.config.method}`);
+  console.log(`config.url:      ${response.config.url}`);
+  console.log(`res.responseUrl: ${response.request.res.responseUrl}`);
+});
+```

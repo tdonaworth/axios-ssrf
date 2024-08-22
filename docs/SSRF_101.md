@@ -38,6 +38,14 @@ For disaster recovery purposes, the application might allow administrative acces
 The administrative interface might listen on a different port number to the main application, and might not be reachable directly by users.
 These kind of trust relationships, where requests originating from the local machine are handled differently than ordinary requests, often make SSRF into a critical vulnerability.
 
+## Portswigger (Burp Suite) SSRF Labs
+If you'd like to practice some SSRF attacks, you can use the following labs from Portswigger:
+- [All SSRF Labs](https://portswigger.net/web-security/all-labs#server-side-request-forgery-ssrf)
+- [Basic SSRF against the local server](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost)
+- [Basic SSRF against another back-end system](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-backend-system)
+- [Blind SSRF with out-fo-band detection](https://portswigger.net/web-security/ssrf/blind/lab-out-of-band-detection)
+
+
 # Credits
 - [OWASP SSRF](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery)
 - [PortSwigger SSRF](https://portswigger.net/web-security/ssrf)

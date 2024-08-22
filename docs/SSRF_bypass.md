@@ -37,7 +37,7 @@ returns a redirection to:
 `http://evil-user.net`
 
 You can leverage the open redirection vulnerability to bypass the URL filter, and exploit the SSRF vulnerability as follows:
-```bash
+```http
 POST /product/stock HTTP/1.0
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 118

