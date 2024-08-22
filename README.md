@@ -13,5 +13,6 @@ TOC:
 - [PortSwigger SSRF](https://portswigger.net/web-security/ssrf)
 - [Snyk SSRF](https://snyk.io/vuln/SNYK-JS-AXIOS-7361793)
 - [CVE-2024-39338](https://www.cve.org/CVERecord?id=CVE-2024-39338)
+- [Axios PR - 6539](https://github.com/axios/axios/pull/6539/commits/59ddd4427ad31a4c7da63e4ee7405e5c88467521)
 - [GitHub Issue - jeffhacks](https://github.com/axios/axios/issues/6463)
 - [GitHub Issue - Osb0rn3](https://github.com/axios/axios/issues/6295)
